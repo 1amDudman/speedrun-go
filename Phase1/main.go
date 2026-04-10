@@ -123,8 +123,6 @@ func PrintMemUsage() {
 	var m runtime.MemStats
 	runtime.ReadMemStats(&m)
 
-	// Alloc - это сколько памяти выделено и еще не очищено сборщиком мусора (наш главный показатель)
-	// Sys - это сколько памяти программа суммарно запросила у операционной системы
 	fmt.Printf("Alloc = %v MiB\tSys = %v MiB\tNumGC = %v\n",
 		m.Alloc/1024/1024,
 		m.Sys/1024/1024,
